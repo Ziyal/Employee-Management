@@ -46,9 +46,9 @@ $title = 'Employee Management';
 
             <div class="login-form">
                 <form action="" method="post">
-                    <input type="text" name="email" placeholder="Email" class="l-input form-control">
+                    <input type="text" name="email" placeholder="Email" class="a-input form-control">
                     <input type="password" name="password" placeholder="Password" class="l-input form-control">
-                    <input type="submit" name="submit" value="Login" class="l-input l-btn btn btn-primary btn-block">
+                    <input type="submit" name="submit" value="Login" class="a-input a-btn btn btn-primary btn-block">
                 </form>
             </div>
 

@@ -67,22 +67,19 @@ $title = 'Add User - Employee Management';
 //include header template
 require('layout/header.php');
 ?>
-
-
-<html>
-    <h1>Add a User</h1>
-    <div class="form">
-        <form action="" method="post">
-            <input type="text" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
-            <input type="password" name="password_cf" placeholder="Confirm Password">
-            <input type="first_name" name="first_name" placeholder="First Name">
-            <input type="last_name" name="last_name" placeholder="Last Name">
-            <input type="submit" name="submit" value="Create User">
-        </form>
-    </div>
-
-</html>
+<div class="container">
+	<div class="register-form">
+		<h1 class="admin-title">Add a Admin</h1>
+		<form action="" method="post">
+			<input type="text" name="email" placeholder="Email" class="a-input form-control">
+			<input type="password" name="password" placeholder="Password" class="a-input form-control">
+			<input type="password" name="password_cf" placeholder="Confirm Password" class="a-input form-control">
+			<input type="text" name="first_name" placeholder="First Name" class="a-input form-control">
+			<input type="text" name="last_name" placeholder="Last Name" class="a-input form-control">
+			<input type="submit" name="submit" value="Create User" class="a-btn btn btn-block btn-success">
+		</form>
+	</div>
+</div>
 
 <?php
 //include footer template

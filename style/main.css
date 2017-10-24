@@ -79,12 +79,33 @@ a {
     max-width: 400px;
 }
 
-.l-input {
+.a-input {
     margin: 5px 0px 5px 0px;
 }
 
-.l-btn {
+.a-btn {
     cursor: pointer;
+}
+
+.error {
+    width: 75%;
+    max-width: 400px; 
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    color: white;
+    border-radius: .25rem;
+}
+
+
+/* ---------- Create Admin: REGISTER.HTML ---------- */
+.admin-title {
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.register-form {
+    width: 75%;
+    max-width: 400px;
 }
 
 .error {
