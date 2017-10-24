@@ -1,13 +1,13 @@
 <?php require('config.php');
 
-//if form has been submitted process it
+//once form is submitted
 if(isset($_POST['submit'])){
     if (!isset($_POST['email'])) $error[] = "Please fill out all fields";
     if (!isset($_POST['password'])) $error[] = "Please fill out all fields";
     if (!isset($_POST['first_name'])) $error[] = "Please fill out all fields";
     if (!isset($_POST['last_name'])) $error[] = "Please fill out all fields";
-	// $username = $_POST['username'];
-	//very basic validation
+
+	// validations
 	if(strlen($_POST['password']) < 5){
 		$error[] = 'Password is too short.';
 	}
@@ -17,7 +17,14 @@ if(isset($_POST['submit'])){
 	if($_POST['password'] != $_POST['password_cf']){
 		$error[] = 'Passwords do not match.';
 	}
-	//email validation
+	if($_POST['first_name'] < 2){
+		$error[] = 'First name too is too short';
+	}	
+	if($_POST['last_name'] < 2){
+		$error[] = 'Last name too is too short';
+	}	
+    
+    //email validation
 	$email = htmlspecialchars_decode($_POST['email'], ENT_QUOTES);
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 	    $error[] = 'Please enter a valid email address';
@@ -36,7 +43,7 @@ if(isset($_POST['submit'])){
 		$hashedpassword = $user->password_hash($_POST['password'], PASSWORD_BCRYPT);
 
 		try {
-			//insert into database with a prepared statement
+			//enter user into db
 			$stmt = $db->prepare('INSERT INTO users (email, password, first_name , last_name) VALUES (:email, :password, :first_name, :last_name)');
 			$stmt->execute(array(
 				':email' => $email,
@@ -49,7 +56,7 @@ if(isset($_POST['submit'])){
 			//redirect to index page
 			header('Location: dashboard.php');
 			exit;
-		//else catch the exception and show the error.
+		//else catch the exception and show error
 		} catch(PDOException $e) {
 		    $error[] = $e->getMessage();
 		}
