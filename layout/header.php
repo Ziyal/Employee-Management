@@ -6,8 +6,6 @@
 
     <body>
         <div class="navbar-container">
-
-
             <ul>
                 <li>
                     <span class="title">Employee Management</span>
@@ -19,6 +17,10 @@
 
                 <li>
                     <a href="#">Add User</a>
+                </li>
+
+                <li>
+                    <a href="logout.php">Logout</a>
                 </li>
             </ul>
 
