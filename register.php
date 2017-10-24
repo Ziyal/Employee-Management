@@ -67,6 +67,7 @@ $title = 'Add User - Employee Management';
 //include header template
 require('layout/header.php');
 ?>
+
 <div class="container">
 	<div class="register-form">
 		<h1 class="admin-title">Add a Admin</h1>
@@ -79,6 +80,15 @@ require('layout/header.php');
 			<input type="submit" name="submit" value="Create User" class="a-btn btn btn-block btn-success">
 		</form>
 	</div>
+
+	<?php
+	//check for any errors
+	if(isset($error)){
+		foreach($error as $error){
+			echo '<p class="bg-danger error">'.$error.'</p>';
+		}
+	}
+	?>
 </div>
 
 <?php

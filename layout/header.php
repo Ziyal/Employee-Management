@@ -25,6 +25,6 @@
                 </li>
             </ul>
 
-            <p>Hello, <?php echo htmlspecialchars($_SESSION['email']); ?></p>
+            <p class="user">Hello, <?php echo htmlspecialchars($_SESSION['email']); ?></p>
 
         </div>
