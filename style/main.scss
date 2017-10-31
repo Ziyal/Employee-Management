@@ -16,6 +16,11 @@ body {
     align-items: center;
 }
 
+h1 {
+    // text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+
 a {
     color: $color-link;
 }
@@ -23,6 +28,7 @@ a {
 a:hover {
     color: $color-link-hover;
 }
+
 /* ---------- HEADER ---------- */
 .navbar-container {
     height: 50px;
@@ -174,7 +180,21 @@ ul {
 }
 
 /* ---------- Employees Page: EMPLOYEEs.HTML ---------- */
-.employee-container {
-    width: 85%;
-    margin: $container-margin;
+.employees-top-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.employee-title {
+   width: 50%;
+   margin: 20px 0px 20px 0px;
+}
+
+.new-employee-btn {
+   width: 49%;
+   margin: 20px 0px 20px 0px;
+   text-align: right;
 }
