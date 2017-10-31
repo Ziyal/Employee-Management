@@ -1,0 +1,180 @@
+$color-link: #e0a131;
+$color-link-hover: #ba821f;
+$font: 'Lato', sans-serif;
+$container-margin: 20px;
+$title-size: 2rem;
+
+body {
+    background-color: #EFEFEF;
+    font-family: $font;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: $color-link;
+}
+
+a:hover {
+    color: $color-link-hover;
+}
+/* ---------- HEADER ---------- */
+.navbar-container {
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between
+}
+
+ul {
+    list-style: none;
+    order: 1;
+    padding: 0px;
+    margin: 0px 0px 0px 10px;
+    li {
+        display: inline-block;
+        margin: 0px 10px 0px 10px;
+    }
+}
+
+.title {
+    font-weight: bold;
+}
+
+.user {
+    order: 2;
+    width: 25%;
+    margin: 0px 20px 0px 0px;
+    text-align: right;
+    font-size: 13px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer-container {
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-list {
+    list-style: none;
+    font-size: 13px;
+    padding: 5px 0px 0px 0px;
+    margin: 0px;
+    .footer-list {
+        padding: 0px;
+        display: inline-block;
+        margin: 0px 10px 0px 10px;
+    }
+}
+
+.copyright {
+    font-size: 10px;
+    font-style: italic;
+    margin: 5px 0px 0px 0px;
+}
+
+/* ---------- Landing Page: INDEX.HTML ---------- */
+.welcome-text {
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.login-form {
+    width: 75%;
+    max-width: 400px;
+}
+
+.a-input {
+    margin: 5px 0px 5px 0px;
+}
+
+.a-btn {
+    cursor: pointer;
+}
+
+/* Form errors */
+.error {
+    width: 75%;
+    max-width: 400px; 
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    color: white;
+    border-radius: .25rem;
+}
+
+
+/* ---------- Create Admin: REGISTER.HTML ---------- */
+.admin-title {
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.register-form {
+    width: 75%;
+    max-width: 400px;
+}
+
+/* ---------- Add Employee Page: EMPLOYEE_ADD.HTML ---------- */
+.add-employee-title {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+
+.add-employee-form {
+    width: 75%;
+    max-width: 400px;
+}
+
+.field-name {
+    margin: 20px 0px 5px 0px;
+    font-weight: bold;
+}
+
+/* Radio buttons for Gender */
+.gender-container {
+    margin: 15px 0px 15px 0px;
+}
+
+.gender-title {
+    font-weight: bold;
+}
+
+.e-radio {
+    display: inline-block;
+    width: 20px;
+    margin: 0px 0px 0px 10px;
+}
+/* --- */
+
+.e-btn {
+    cursor: pointer;
+    margin: 10px 0px 0px 0px;
+}
+
+/* Form errors */
+.error {
+    width: 75%;
+    max-width: 400px; 
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    color: white;
+    border-radius: .25rem;
+}
+
+/* ---------- Employees Page: EMPLOYEEs.HTML ---------- */
+.employee-container {
+    width: 85%;
+    margin: $container-margin;
+}
