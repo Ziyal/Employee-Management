@@ -37,7 +37,7 @@
                             echo "<td>" . $row['hire_date'] . "</td>";
                             echo "<td>" . $row['email'] . "</td>";
                             echo "<td><button value=". $row['employee_id'] . " class='btn btn-primary btn-sm'>Edit</button></td>";
-                            echo "<td><form action='delete_employee/" . $row['employee_id'] . "' method='post'><input type='submit' value='Delete' class='btn btn-danger btn-sm'></form></td>";
+                            echo "<td><a class='btn btn-danger btn-sm' href='delete_employee.php?employee_id=" . $row['employee_id'] . "'>Delete</a>";
                         echo "</tr>";
                 }
                 echo "</tbody>";
